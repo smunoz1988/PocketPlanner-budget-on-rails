@@ -4,6 +4,7 @@ class CreateMovements < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :amount
       t.references :author, null: false, foreign_key: { to_table: :users, column: :author_id }
+      t.references :group, null: false, foreign_key: { to_table: :groups, column: :group_id }
       t.timestamps
     end
   end
