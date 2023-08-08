@@ -1,0 +1,10 @@
+<h1><%= @group.name %></h1>
+<p>Total amount: $<%= sprintf('%.2f', @group.total_amount()) %></p>
+<% @movements.each do |movement| %>
+  <p><%= movement.name %></p>
+  <p>$ <%= sprintf('%.2f', movement.amount) %></p>
+<% end %>
+
+<%= button_to "add a new transaction", new_user_group_movement_path(:user_id => current_user.id, :group_id => params[:group_id]), :method => :get %>
+
+<%= button_to "back", user_groups_path(current_user), :method => :get %>

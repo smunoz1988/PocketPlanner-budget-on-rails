@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_07_202634) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_08_171553) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_202634) do
 
   create_table "movements", force: :cascade do |t|
     t.string "name"
-    t.integer "amount"
+    t.decimal "amount", precision: 10, scale: 2
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
