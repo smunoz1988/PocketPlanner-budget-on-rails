@@ -12,9 +12,11 @@ class GroupsController < ApplicationController
     @group = Group.new(post_params)
     @group.author_id = current_user.id
     if @group.save
+      flash[:notice] = "Group created"
       redirect_to user_groups_path(current_user)
     else
-      render 'new'
+      flash[:alert] = "You already have a group with that name"
+      render turbo_stream: turbo_stream.replace('flash_messages', partial: 'shared/flash_messages')
     end
   end
 

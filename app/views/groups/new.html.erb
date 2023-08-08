@@ -1,3 +1,7 @@
+<turbo-frame id="flash_messages">
+  <%= render 'shared/flash_messages' %>
+</turbo-frame>
+
 <div class="container">
     <%= form_with model: @group, url: user_groups_path(current_user) do |form| %>
       <h2>Create New Category</h2>
