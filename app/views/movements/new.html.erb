@@ -1,0 +1,23 @@
+<turbo-frame id="flash_messages">
+  <%= render 'shared/flash_messages' %>
+</turbo-frame>
+
+<div class="container">
+    <%= form_with model: @movement, url: user_group_movements_path(:user_id => current_user.id, :group_id => params[:group_id]) do |form| %>
+      <h2>Create New Transaction</h2>
+
+      <div class="field">
+        <%= form.text_field :name, placeholder: "Name", autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :amount, placeholder: "amount", type: :number, step: "any" %>
+      </div>
+     
+      <%= form.submit 'Create transaction', class: "btn" %>
+    <% end %>
+
+    <br />
+
+    <%= link_to "Back", user_groups_path(current_user), class: "btn" %>
+  </div>
