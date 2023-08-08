@@ -15,13 +15,13 @@
       </div>
 
       <div class="field">
-        <p>Category: <%= @group.name %></p>
+        <%= form.select :group_id, options_for_select([["Select a Category", nil]] + @groups), {}, { placeholder: "Select a Category" } %>
       </div>
-     
+
       <%= form.submit 'Save', class: "btn" %>
     <% end %>
 
     <br />
 
-    <%= link_to "Back", user_group_movements_path(:user_id => current_user.id, :group_id => @group.id), class: "btn" %>
+    <%= link_to "Back", user_group_movements_path(:user_id => current_user.id, :group_id => params[:group_id]), class: "btn" %>
   </div>

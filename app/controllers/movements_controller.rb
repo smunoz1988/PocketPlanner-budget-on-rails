@@ -6,7 +6,7 @@ class MovementsController < ApplicationController
   end
 
   def new
-    @group = Group.find(params[:group_id])
+    @groups = current_user.groups.pluck(:name, :id)
     # Create a new movement
     @movement = Movement.new
   end
@@ -14,17 +14,16 @@ class MovementsController < ApplicationController
   def create
     @movement = Movement.new(post_params)
     @movement.author_id = current_user.id
-    @movement.group_id = params[:group_id]
     if @movement.save
-      flash[:notice] = 'Movement created'
-      redirect_to user_group_movements_path(:user_id => current_user.id, :group_id => params[:group_id])
+      flash[:notice] = 'Transaction created'
+      redirect_to user_group_movements_path(:user_id => current_user.id, :group_id => @movement.group_id)
     else
-      flash[:alert] = 'You already have a movement with that name'
+      flash[:alert] = 'Missing fields / repeated transaction name'
       render turbo_stream: turbo_stream.replace('flash_messages', partial: 'shared/flash_messages')
     end
   end
 
     def post_params
-      params.require(:movement).permit(:name, :amount)
+      params.require(:movement).permit(:name, :amount, :group_id)
     end
 end

@@ -1,4 +1,4 @@
-<h1>Movements#index</h1>
+<h1><%= @group.name %></h1>
 <p>Total amount: $<%= sprintf('%.2f', @group.total_amount()) %></p>
 <% @movements.each do |movement| %>
   <p><%= movement.name %></p>
