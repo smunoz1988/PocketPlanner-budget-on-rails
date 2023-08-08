@@ -2,7 +2,7 @@ class MovementsController < ApplicationController
   def index
     # Get all movements from the current user and from the current group
     @group = Group.find(params[:group_id])
-    @movements = current_user.movements.where(author_id: current_user.id, group_id: params[:group_id])
+    @movements = current_user.movements.where(author_id: current_user.id, group_id: params[:group_id]).order(created_at: :desc)
   end
 
   def new
