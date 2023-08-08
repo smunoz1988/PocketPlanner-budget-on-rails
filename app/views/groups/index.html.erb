@@ -1,6 +1,14 @@
 <h1>Group index</h1>
 <p>estas en index</p>
 
+<% @groups.each do |group| %>
+  <div>
+    <h3><%= group.name %></h3>
+    <img src="<%= asset_path("#{group.icon}.png") %>" alt="Icon" width="60px">
+  </div>
+<% end %>
+
+<%= button_to "add a new category", new_user_group_path(current_user) %>
 
 <% if user_signed_in? %>
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
