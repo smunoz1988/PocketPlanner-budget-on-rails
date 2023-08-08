@@ -13,8 +13,12 @@
       <div class="field">
         <%= form.text_field :amount, placeholder: "amount", type: :number, step: "any" %>
       </div>
+
+      <div class="field">
+        <p>Category: <%= @group.name %></p>
+      </div>
      
-      <%= form.submit 'Create transaction', class: "btn" %>
+      <%= form.submit 'Save', class: "btn" %>
     <% end %>
 
     <br />
