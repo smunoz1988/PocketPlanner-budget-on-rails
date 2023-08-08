@@ -1,0 +1,28 @@
+<div class="container">
+    <%= form_with model: @group, url: user_groups_path(current_user) do |form| %>
+      <h2>Create New Category</h2>
+
+      <div class="field">
+        <%= form.text_field :name, placeholder: "Category Name", autofocus: true %>
+      </div>
+
+        <div class="field">
+          <%= form.label :icon, "Select an Icon" %>
+            <div class="icon-list">
+              <% ["bycicle.png", "car.png", "customer-service(1).png", "fast-food.png", "grocery.png", "healthcare.png", "house.png", "mechanic.png"].each do |icon_filename| %>
+                <label>
+                  <%= radio_button_tag "group[icon]", icon_filename %>
+                  <%= image_tag icon_filename, alt: "Icon", width: "32px" %>
+                </label>
+            <% end %>
+          </div>
+        </div>
+
+     
+      <%= form.submit 'Create Category', class: "btn" %>
+    <% end %>
+
+    <br />
+
+    <%= link_to "Back", user_groups_path(current_user), class: "btn" %>
+  </div>
