@@ -1,0 +1,6 @@
+<!-- shared/_flash_messages.html.erb -->
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
