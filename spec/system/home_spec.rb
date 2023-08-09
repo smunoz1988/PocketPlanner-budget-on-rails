@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe 'User Index', type: :system do
+RSpec.describe 'Home Index', type: :system do
   before do
     driven_by(:rack_test)
   end
 
-  it 'displays the profile picture for each user' do
+  it 'displays the app title for each user' do
     visit root_path
     expect(page).to have_content("PocketPlanner")
   end
