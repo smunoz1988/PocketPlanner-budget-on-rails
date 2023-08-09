@@ -11,5 +11,10 @@ RSpec.describe 'Home', type: :request do
       get '/'
       expect(response).to render_template(:index)
     end
+
+    it 'displays the correct title' do
+      get '/'
+      expect(response.body).to include('PocketPlanner')
+    end
   end
 end
