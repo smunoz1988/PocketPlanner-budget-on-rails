@@ -8,7 +8,6 @@ RSpec.describe 'Movements', type: :request do
 
     login_as(@user, scope: :user)
     @group = Group.create(name: 'Group 1', icon: 'icon.png', author_id: @user.id)  # Use author_id instead of author
-    puts "Group ID: #{@group.id}"
   end
 
   describe 'user_groups_path' do
