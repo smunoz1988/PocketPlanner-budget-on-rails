@@ -1,0 +1,64 @@
+body {
+  background-color: #f5f6f8;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #3776c2;
+  align-items: center;
+}
+
+.formContainer {
+  color: #f5f6f8;
+  margin-top: 1rem;
+}
+
+.backButton {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 0.5rem;
+}
+
+.sectionName {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.logInBtn {
+  text-decoration: none;
+  color: white;
+  text-align: end;
+  padding-right: 0.5rem;
+  font-weight: normal;
+}
+
+.formFields {
+  height: 3rem;
+  color: #434b54;
+  width: 100%;
+  border: none;
+  padding-left: 1rem;
+}
+
+.field {
+  width: 100%;
+}
+
+.actions {
+  width: 100%;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  width: 100%;
+  color: white;
+  background-color: #3878c2;
+  height: 3rem;
+  border: none;
+}
