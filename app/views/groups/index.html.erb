@@ -22,7 +22,10 @@
         <a href="<%= user_group_movements_path(:user_id => current_user.id, :group_id => group.id) %>">
           <div class="categoryContainer">
             <img src="<%= asset_path("#{group.icon}") %>" alt="Icon" width="60px">
-            <h3 class="groupName"><%= group.name %></h3>
+            <div>
+              <h3 class="groupName"><%= group.name %></h3>
+              <p class="categoryDate"><%= group.created_at.strftime("%d %B %Y") %></p>
+            </div>
             <p class="groupAmount">$ <%= sprintf('%.2f', group.total_amount()) %></p>
           </div>
         </a>
