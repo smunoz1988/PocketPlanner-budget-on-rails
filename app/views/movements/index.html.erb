@@ -23,11 +23,15 @@
     <p class= "totalAmount">Total amount: $<%= sprintf('%.2f', @group.total_amount()) %></p>
 
     <div class="movementsContMax">
-      <% @movements.each do |movement| %>
-        <div class="movementCont">
-          <p><%= movement.name %></p>
-          <p>$ <%= sprintf('%.2f', movement.amount) %></p>
-        </div>
+      <% if @movements.empty? %>
+        <p class="emptyGroups">No transactions added yet</p>
+      <% else %>
+        <% @movements.each do |movement| %>
+          <div class="movementCont">
+            <p class="movementName"><%= movement.name %></p>
+            <p class="movementAmount">$ <%= sprintf('%.2f', movement.amount) %></p>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
