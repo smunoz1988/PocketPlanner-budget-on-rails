@@ -62,3 +62,20 @@ body {
   height: 3rem;
   border: none;
 }
+
+hr {
+  background-color: white;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.forgotLink {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #434b54;
+  font-weight: normal;
+  font-size: 14px;
+  justify-content: center;
+  margin-top: 1rem;
+}

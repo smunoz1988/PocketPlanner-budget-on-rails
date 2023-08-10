@@ -1,26 +1,36 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <%= stylesheet_link_tag 'userForms', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="topSection">
+      <%= link_to '&larr;'.html_safe, root_path, class: 'backButton' %>
+      <h2 class="sectionName">LOGIN</h2>
+      <%= link_to "Sign up", new_user_registration_path, class: "logInBtn" %>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    <div class="formContainer">
 
-<%= render "devise/shared/links" %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, class:'formFields', autofocus: true, autocomplete: "email", placeholder: "Email" %>
+        </div>
+        <hr>
+        <div class="field">
+          <%= f.password_field :password, class:'formFields', autocomplete: "current-password", placeholder: "Password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "submitBtn" %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= link_to "Forgot your password?", new_user_password_path, class:"forgotLink" %>
+  </body>
+</html>
