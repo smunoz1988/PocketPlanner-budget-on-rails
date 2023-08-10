@@ -18,6 +18,6 @@ RSpec.describe 'Home Index', type: :system do
   it 'redirects to login if click on log in' do
     visit root_path
     click_link "LOG IN"
-    expect(page).to have_content("Log in")
+    expect(page).to have_content("LOGIN")
   end
 end

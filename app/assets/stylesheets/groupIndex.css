@@ -1,0 +1,65 @@
+body {
+  background-color: #f5f6f8;
+}
+
+.hamb {
+  color: #3776c2
+}
+
+.signOutButton {
+  display: flex;
+  color: white;
+  background-color: #3776c2;
+  border: none;
+  font-size: 15px;
+  padding-right: 0.5rem;
+}
+
+.button_to {
+  display: flex;
+  justify-content: end;
+}
+
+.groupCont {
+  margin-bottom: 6rem;
+}
+
+.categoryContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #cdd1d4;
+}
+
+.groupAmount {
+  color: black;
+  font-weight: bold;
+}
+
+.subBtnContainer {
+  background-color: #5fb523;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.newBtn {
+  background-color: #5fb523;
+  width: 90%;
+  height: 3rem;
+  margin: auto;
+  border: solid 1px white;
+  color: white;
+  border-radius: 0.3rem;
+}

@@ -1,18 +1,37 @@
-<h1>Group index</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <%= stylesheet_link_tag 'groupIndex', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
 
-<% @groups.each do |group| %>
-<a href="<%= user_group_movements_path(:user_id => current_user.id, :group_id => group.id) %>">
-  <div>
-    <h3><%= group.name %></h3>
-    <img src="<%= asset_path("#{group.icon}") %>" alt="Icon" width="60px">
-    <p>$ <%= sprintf('%.2f', group.total_amount()) %></p>
-  </div>
-</a>
+    <div class="topSection">
+      <p class="hamb">Xpense</p>
+      <h2 class="sectionName">CATEGORIES</h2>
+      <% if user_signed_in? %>
+        <%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: "signOutButton" %>
+      <% end %>
+    </div>
 
-<% end %>
 
-<%= button_to "add a new category", new_user_group_path(:user_id => current_user.id), :method => :get %>
+    <div class="groupCont">
+      <% @groups.each do |group| %>
+        <a href="<%= user_group_movements_path(:user_id => current_user.id, :group_id => group.id) %>">
+          <div class="categoryContainer">
+            <img src="<%= asset_path("#{group.icon}") %>" alt="Icon" width="60px">
+            <h3 class="groupName"><%= group.name %></h3>
+            <p class="groupAmount">$ <%= sprintf('%.2f', group.total_amount()) %></p>
+          </div>
+        </a>
+      <% end %>
+    </div>
 
-<% if user_signed_in? %>
-    <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% end %>
+    <div class="subBtnContainer">
+      <%= button_to "ADD A NEW CATEGORY", new_user_group_path(:user_id => current_user.id), :method => :get, class: "newBtn" %>
+    </div>
+
+  </body>
+</html>

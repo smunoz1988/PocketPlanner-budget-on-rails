@@ -12,6 +12,6 @@ RSpec.describe 'Groups Index', type: :system do
 
   it 'displays the add new category button' do
     visit user_groups_path(@user)
-    expect(page).to have_content("add a new category")
+    expect(page).to have_content("ADD A NEW CATEGORY")
   end
 end
