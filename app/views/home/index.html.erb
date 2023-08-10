@@ -1,4 +1,10 @@
-<h1>PocketPlanner</h1>
+<div class="content-container">
+  <div class="centered-content">
+    <h1 class="mainTitle">PocketPlanner</h1>
+  </div>
+</div>
 
-<%= link_to "Sign In", new_user_session_path %>
-<%= link_to "Sign Up", new_user_registration_path %>
+<div class="sessionBtns">
+  <%= link_to "LOG IN", new_user_session_path, class: "logInBtn" %>
+  <%= link_to "SIGN UP", new_user_registration_path, class: "logOutBtn" %>
+</div>

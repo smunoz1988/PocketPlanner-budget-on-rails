@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
       flash[:notice] = 'Group created'
       redirect_to user_groups_path(current_user)
     else
-      flash[:alert] = 'You already have a group with that name'
+      flash[:alert] = 'Group not created / missing input or group already exists'
       render turbo_stream: turbo_stream.replace('flash_messages', partial: 'shared/flash_messages')
     end
   end
