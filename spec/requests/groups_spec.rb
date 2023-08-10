@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
   include Devise::Test::IntegrationHelpers
-  
+
   before(:each) do
     @user = User.create(name: 'mike', email: 'mihael@gmail.com', password: '123456', password_confirmation: '123456')
 

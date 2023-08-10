@@ -1,92 +1,91 @@
 body {
-    background-color: #f5f6f8;
-    margin: 0;
-  }
-  
-  .topSection {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: #3776c2;
-    align-items: center;
-    height: 5rem;
-  }
-  
-  .formContainer {
-    color: #f5f6f8;
-    margin-top: 1rem;
-  }
-  
-  .backButton {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-    padding-left: 0.5rem;
-  }
-  
-  .sectionName {
-    color: white;
-    font-size: 20px;
-    font-weight: normal;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    text-align: center;
-  }
-  
-  .logInBtn {
-    text-decoration: none;
-    color: white;
-    text-align: end;
-    padding-right: 0.5rem;
-    font-weight: normal;
-  }
-  
-  .formFields {
-    height: 3rem;
-    color: #434b54;
-    border: none;
-    padding-left: 1rem;
-  }
+  background-color: #f5f6f8;
+  margin: 0;
+}
 
-  .iconCont {
-    padding-left: 1rem;
-  }
-  
-  .field {
-    color: #434b54;
-    margin-top: 1rem;
-  }
+.topSection {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #3776c2;
+  align-items: center;
+  height: 5rem;
+}
 
-  .icon-list {
-    margin-top: 1rem;
-  }
-  
-  .actions {
-    width: 100%;
-  }
-  
-  .submitBtn {
-    margin-top: 1rem;
-    width: 100%;
-    color: white;
-    background-color: #3878c2;
-    height: 3rem;
-    border: none;
-  }
-  
-  hr {
-    background-color: white;
-    margin: 0;
-    margin-left: 1rem;
-  }
-  
-  .forgotLink {
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: #434b54;
-    font-weight: normal;
-    font-size: 14px;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
+.formContainer {
+  color: #f5f6f8;
+  margin-top: 1rem;
+}
+
+.backButton {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 0.5rem;
+}
+
+.sectionName {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.logInBtn {
+  text-decoration: none;
+  color: white;
+  text-align: end;
+  padding-right: 0.5rem;
+  font-weight: normal;
+}
+
+.formFields {
+  height: 3rem;
+  color: #434b54;
+  border: none;
+  padding-left: 1rem;
+}
+
+.iconCont {
+  padding-left: 1rem;
+}
+
+.field {
+  color: #434b54;
+  margin-top: 1rem;
+}
+
+.icon-list {
+  margin-top: 1rem;
+}
+
+.actions {
+  width: 100%;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  width: 100%;
+  color: white;
+  background-color: #3878c2;
+  height: 3rem;
+  border: none;
+}
+
+hr {
+  background-color: white;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.forgotLink {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #434b54;
+  font-weight: normal;
+  font-size: 14px;
+  justify-content: center;
+  margin-top: 1rem;
+}
