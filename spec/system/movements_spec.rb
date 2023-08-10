@@ -6,7 +6,7 @@ RSpec.describe 'Movement Index', type: :system do
   before do
     @user = User.create(name: 'mike', email: 'mihael@gmail.com', password: '123456', password_confirmation: '123456')
     login_as(@user, scope: :user)
-    @group = Group.create(name: 'Group 1', icon: 'icon.png', author_id: @user.id)
+    @group = Group.create(name: 'Group 1', icon: 'car.png', author_id: @user.id)
     driven_by(:rack_test)
   end
 
