@@ -80,3 +80,11 @@ hr {
   justify-content: center;
   margin-top: 1rem;
 }
+
+.topSectionMove {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  background-color: #3776c2;
+  align-items: center;
+  height: 5rem;
+}
