@@ -12,6 +12,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -53,6 +54,13 @@ PocketPlanner is a user-friendly budgeting application built using the Ruby on R
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Live Demo <a name="live-demo"></a>
+
+Deploy on Render: https://rails-d6nv.onrender.com
+
+Live demostration: https://www.loom.com/share/969c54b969544463ae47d99eb8f22dbe?sid=89d9c443-d6fd-4aec-b028-8a0dc318bfa9
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -127,7 +135,7 @@ If you like this project please follow me to find more projects of this type in 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Gregoire Vella on Behance, who created the based design for Pocket Planner
+I would like to thank Gregoire Vella on Behance, who created the based design for the budget app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
