@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: PocketPlanner_budget_on_rails_production
   username: PocketPlanner_budget_on_rails
   password: <%= ENV["POCKETPLANNER_BUDGET_ON_RAILS_DATABASE_PASSWORD"] %>
