@@ -1,0 +1,61 @@
+.content-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 90vh; /* Full viewport height */
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.mainTitle {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.sessionBtns {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* or use "absolute" if you want it relative to its parent */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.sessionBtns a {
+  height: 3rem;
+  border-radius: 5%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logInBtn {
+  color: white;
+  background-color: #3776c2;
+}
+
+.logOutBtn {
+  color: #434b54;
+}
+
+/* For screens with a width up to 768px */
+@media (min-width: 768px) {
+  .sessionBtns {
+    position: relative; /* Revert to relative positioning */
+    max-width: 100%; /* Take full width */
+    padding: 20px; /* Increase padding for better spacing */
+    align-items: center;
+  }
+
+  .sessionBtns a {
+    width: 15rem; /* Take half width */
+  }
+}

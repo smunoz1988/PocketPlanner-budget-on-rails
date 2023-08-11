@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <%= stylesheet_link_tag 'userForms', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <div class="topSection">
+      <%= link_to '&larr;'.html_safe, root_path, class: 'backButton' %>
+      <h2 class="sectionName">REGISTER</h2>
+      <%= link_to "Log in", new_user_session_path, class: "logInBtn" %>
+    </div>
+
+    <div class="formContainer">
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= text_field :user, :name, autofocus: true, class: 'formFields', placeholder: 'Full name' %>
+        </div>
+        <hr>
+        <div class="field">
+          <%= f.email_field :email, autocomplete: "email", class:'formFields', placeholder: 'Email' %>
+        </div>
+        <hr>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "new-password", class:'formFields', placeholder: "Password" %>
+        </div>
+        <hr>
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'formFields', placeholder: "Password Confirmation" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "submitBtn" %>
+        </div>
+      <% end %>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <%= stylesheet_link_tag 'groupIndex', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <div class="topSectionMove">
+      <%= link_to '&larr;'.html_safe, user_groups_path(current_user), class: "backButtonMove" %>
+      <h2 class="sectionName"><%= @group.name %></h2>
+      <% if user_signed_in? %>
+        <%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: "signOutButton" %>
+      <% end %>
+    </div>
+
+    <div class="iconCont">
+      <img src="<%= asset_path("#{@group.icon}") %>" alt="Icon" width="60px" class="iconMovement">
+    </div>
+
+    <p class= "totalAmount">Total amount: $<%= sprintf('%.2f', @group.total_amount()) %></p>
+
+    <div class="movementsContMax">
+      <% if @movements.empty? %>
+        <p class="emptyGroups">No transactions added yet</p>
+      <% else %>
+        <% @movements.each do |movement| %>
+          <div class="movementCont">
+            <p class="movementName"><%= movement.name %></p>
+            <p class="movementAmount">$ <%= sprintf('%.2f', movement.amount) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    
+    <div class="subBtnContainer">
+      <%= button_to "add a new transaction", new_user_group_movement_path(:user_id => current_user.id, :group_id => params[:group_id]), :method => :get, class: "newBtn" %>
+    </div>
+   
+
+  </body>
+</html>
